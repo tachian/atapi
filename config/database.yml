@@ -1,0 +1,28 @@
+development:
+  adapter: mysql2
+  reconnect: false
+  database: atapi_development
+  pool: 5
+  username: root
+  password: 
+  host: localhost
+
+test:
+  adapter: mysql2
+  reconnect: false
+  database: atapi_test
+  pool: 5
+  username: root
+  password: 
+  host: localhost
+
+  # Legacy databases
+
+legacy_development:
+  adapter: mysql2
+  reconnect: false
+  database: vdc_development
+  pool: 5
+  username: root
+  password: 
+  host: localhost 
