@@ -47,6 +47,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'youtube', git: 'https://github.com/copyrightly/youtube'
+
 group :development do
   # improve errors read and interaction
   gem 'better_errors'
@@ -70,6 +72,9 @@ group :development do
   gem 'oauth2'
   # For testing REST calls
   gem 'rest-client'
+
+  gem 'video_info'
+
 end
 
 group :development, :test do

@@ -1,5 +1,25 @@
 namespace :migrate do
 
+  desc "Capture image from lectures"
+  task :get_youtube_image => :environment do
+    
+    require 'open-uri'
+
+    lectures = Lecture.all
+    lectures.each do |l|
+      if !File.exist?('images/'+l.id.to_s+'.jpg')
+        open('images/'+l.id.to_s+'.jpg', 'wb') do |file|
+          if !l.parts.first.url.blank?
+            file << open("http://i.ytimg.com/vi/"+l.parts.first.url+"/1.jpg").read
+            puts l.name + " - " + l.order.to_s
+          end
+        end
+      end
+    end
+    puts "Fim..."
+  end
+
+
   desc "Migrate data"
   task :migrate_core => :environment do
 
