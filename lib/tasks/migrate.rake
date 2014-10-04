@@ -41,7 +41,8 @@ namespace :migrate do
     Subject.delete_all
 
     puts "[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[   MIGRATION START   ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]\n\n\n"
-    legacy_subject = Legacy::Subject.all
+    legacy_subject = Legacy::Subject.where("id < 22")
+        # legacy_course_subject.each do |lcs|
     legacy_subject.each do |ls|
       puts "===============>   Subject: #{ls.name}"
       puts "\n\n"
