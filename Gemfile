@@ -47,7 +47,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'youtube', git: 'https://github.com/copyrightly/youtube'
+gem 'rb-fsevent', :group => :development
 
 group :development do
   # improve errors read and interaction
