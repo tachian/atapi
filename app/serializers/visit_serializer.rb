@@ -1,7 +1,7 @@
 class VisitSerializer < ActiveModel::Serializer
 	cached
   delegate :cache_key, to: :object
-  attributes :course_id, :course_name, :teacher, :university_name, :total_parts
+  attributes :course_id, :course_name, :teacher, :university_name, :total_parts, :image
 
   def course_id
   	object.course.id
@@ -21,5 +21,9 @@ class VisitSerializer < ActiveModel::Serializer
 
   def total_parts
   	object.course.parts.count
+  end
+
+  def image
+    object.course.lectures.first.id
   end
 end
