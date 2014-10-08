@@ -70,10 +70,10 @@ module Api
 
         def locate_collection
           if (params.has_key?("university_id"))  
-            @courses = University.find(params[:university_id]).courses
+            @courses = University.find(params[:university_id]).courses.where(status:0)
 
           elsif (params.has_key?("id"))
-            @courses = Subject.find(params[:id]).courses
+            @courses = Subject.find(params[:id]).courses.where(status:0)
 
           else
             @courses = Course.all
