@@ -9,12 +9,10 @@ module Api
       before_action :authenticate_user!, except: [:create]
       before_action :configure_permitted_parameters
 
-      # Rails.logger.debug _process_action_callbacks.map{ |cb| [cb.filter, cb.options] }
-
       # POST /resource
       def create
         build_resource(sign_up_params)
-
+        binding.pry
         resource.skip_confirmation! 
         if resource.save
           if resource.active_for_authentication?

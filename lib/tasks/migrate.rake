@@ -141,3 +141,9 @@ namespace :migrate do
   end
 
 end
+
+
+# delete from parts where lecture_id in (select id from lectures where course_id in (select id from courses where university_id in (19,21,22,25, 26, 27)));
+# delete from lectures where course_id in (select id from courses where university_id in (19,21,22,24,25, 26, 27));
+# delete from courses where university_id in (19,21,22,24,25, 26, 27);
+# delete from universities where id in (19,21,22,24,25, 26, 27);

@@ -41,7 +41,7 @@ Atapi::Application.configure do
     address: 'smtp.gmail.com',
     port: 587,
     authentication: :plain,
-    user_name: 'altachian@gmail.com',
+    user_name: 'contato@tulupa.com.br',
     password: 'FreiRolin660'
   }
 
