@@ -12,7 +12,7 @@ module Api
       # POST /resource
       def create
         build_resource(sign_up_params)
-        binding.pry
+        
         resource.skip_confirmation! 
         if resource.save
           if resource.active_for_authentication?
