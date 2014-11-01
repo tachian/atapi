@@ -43,6 +43,9 @@ gem 'doorkeeper'
 gem 'dalli'
 gem 'memcachier'
 
+# New Relic
+gem 'newrelic_rpm'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -85,7 +88,7 @@ group :development, :test do
   # watch and run migrations
   gem 'guard-migrate'
   # FS events for mac
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  # gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   # factory_girl also on development, to replace fixtures
   gem 'factory_girl_rails'
   # Fake data generator
