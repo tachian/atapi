@@ -41,6 +41,7 @@ gem 'doorkeeper'
 
 # Memcache connector - https://github.com/mperham/dalli
 gem 'dalli'
+gem 'memcachier'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
