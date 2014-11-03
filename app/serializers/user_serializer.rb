@@ -21,3 +21,6 @@ class UserSerializer < ActiveModel::Serializer
   	!is_visited_courses
   end
 end
+
+
+
