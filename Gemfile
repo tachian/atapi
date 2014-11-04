@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.0.3'
 
 # Use mysql2 as the database for Active Record
 gem 'mysql2'
@@ -34,7 +34,7 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'devise'
 
 # Active model serializator
-gem 'active_model_serializers'
+gem 'active_model_serializers', "~> 0.8.0"
 
 # OAuth authorization
 gem 'doorkeeper'
@@ -42,6 +42,7 @@ gem 'doorkeeper'
 # Memcache connector - https://github.com/mperham/dalli
 gem 'dalli'
 gem 'memcachier'
+
 
 # New Relic
 gem 'newrelic_rpm'
