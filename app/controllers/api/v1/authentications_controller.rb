@@ -50,6 +50,7 @@ module Api
           
           user.save
           sign_in(:user, user)
+          binding.pry
           Api::V1::RegistrationMailer.new_account(user).deliver
         else
           user.provider = 'facebook'

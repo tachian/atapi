@@ -14,9 +14,15 @@ module Api
         build_resource(sign_up_params)
         
         resource.skip_confirmation! 
+        
         if resource.save
+          
           if resource.active_for_authentication?
+            
             sign_up resource_name, resource
+
+            Api::V1::RegistrationMailer.new_account(resource).deliver
+            
             return render status: :ok, json: resource
           else
             expire_data_after_sign_in!
