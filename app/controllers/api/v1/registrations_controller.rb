@@ -11,6 +11,7 @@ module Api
 
       # POST /resource
       def create
+        binding.pry
         build_resource(sign_up_params)
         
         resource.skip_confirmation! 
@@ -24,7 +25,7 @@ module Api
             # Api::V1::RegistrationMailer.new_account(resource).deliver
 
 
-            
+
             return render status: :ok, json: resource
           else
             expire_data_after_sign_in!
