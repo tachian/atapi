@@ -43,6 +43,7 @@ gem 'doorkeeper'
 gem 'dalli'
 gem 'memcachier'
 
+gem 'unicorn'
 
 # New Relic
 gem 'newrelic_rpm'

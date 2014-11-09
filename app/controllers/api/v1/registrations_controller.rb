@@ -11,7 +11,7 @@ module Api
 
       # POST /resource
       def create
-        binding.pry
+
         build_resource(sign_up_params)
         
         resource.skip_confirmation! 
