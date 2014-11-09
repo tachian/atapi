@@ -85,18 +85,18 @@ Atapi::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.default_url_options = { host: 'tulupa.com.br' }
-  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.default_url_options = { host: 'tulupa.com.br' }
+  # config.action_mailer.delivery_method = :smtp
 
 
-  # SMTP settings
-  ActionMailer::Base.smtp_settings = {
-    address: 'smtp.gmail.com',
-    port: 587,
-    domain: 'tulupa.com.br',
-    authentication: :plain,
-    user_name: 'contato@tulupa.com.br',
-    password: 'FreiRolin660',
-    enable_starttls_auto: true
-  }
+  # # SMTP settings
+  # ActionMailer::Base.smtp_settings = {
+  #   address: 'smtp.gmail.com',
+  #   port: 587,
+  #   domain: 'tulupa.com.br',
+  #   authentication: :plain,
+  #   user_name: 'contato@tulupa.com.br',
+  #   password: 'FreiRolin660',
+  #   enable_starttls_auto: true
+  # }
 end
