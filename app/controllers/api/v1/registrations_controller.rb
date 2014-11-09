@@ -21,7 +21,7 @@ module Api
             
             sign_up resource_name, resource
 
-            Api::V1::RegistrationMailer.new_account(resource).deliver
+            # Api::V1::RegistrationMailer.new_account(resource).deliver
             
             return render status: :ok, json: resource
           else
