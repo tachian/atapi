@@ -34,7 +34,7 @@ Atapi::Application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:9000' }
 
   # Delivery method for development
-  config.action_mailer.delivery_method = :file
+  config.action_mailer.delivery_method = :smtp
 
   # SMTP settings
   ActionMailer::Base.smtp_settings = {

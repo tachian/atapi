@@ -71,9 +71,9 @@ module Api
 
         def locate_collection
           if (params.has_key?("lecture_id"))
-            @parts = Lecture.find(params[:lecture_id]).parts
+            @parts = Lecture.find(params[:lecture_id]).parts.order('parts.order')
           else
-            @parts = Parts.all
+            @parts = Parts.all.order('parts.order')
           end
         end
     end
