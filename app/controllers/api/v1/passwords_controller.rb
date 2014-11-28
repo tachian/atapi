@@ -18,7 +18,7 @@ module Api
           sign_in resource_name, user
           return render status: :ok, json: user, serializer: UserSerializer
         else
-          return render status: :forbidden, json: {success: false, error: 'authentication failed'}
+          return render status: :forbidden, json: {success: false, error: user.errors.messages[:reset_password_token].first}
         end
       end
 
