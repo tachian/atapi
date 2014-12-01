@@ -1,7 +1,7 @@
 class VisitSerializer < ActiveModel::Serializer
 	cached
   delegate :cache_key, to: :object
-  attributes :course_id, :course_name, :teacher, :university_name, :total_parts, :image
+  attributes :course_id, :course_name, :teacher, :university_name, :total_parts, :image, :subtitle
 
   def course_id
   	object.course.id
@@ -25,5 +25,9 @@ class VisitSerializer < ActiveModel::Serializer
 
   def image
     object.course.lectures.first.id
+  end
+
+  def subtitle
+    object.course.lectures.where('subtitle !=?', '').count() > 0
   end
 end
