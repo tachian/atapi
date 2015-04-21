@@ -5,7 +5,7 @@ module Api
 
       def new_account(user)
       	@user = user
-        mail(to: user.email, subject: 'Sua conta foi criada no Veduca')
+        mail(to: user.email, subject: 'Sua conta foi criada no Tulupa.')
       end
     end
   end
